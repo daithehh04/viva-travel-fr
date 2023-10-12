@@ -9,7 +9,7 @@ export default async function getRandomTour(query, lang) {
       variables: { language: lang?.toUpperCase() }
 
     }),
-    next: { revalidate: process.env.NEXT_PUBLIC_REVALIDATE }
+    next: { revalidate: 60 || process.env.NEXT_PUBLIC_REVALIDATE }
   })
   if (!res.ok) {
     throw new Error('Failed to fetch data')

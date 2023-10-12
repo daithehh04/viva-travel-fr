@@ -13,7 +13,7 @@ export default async function getDataWithTaxonomy(data, query) {
       }
 
     }),
-    next: { revalidate: process.env.NEXT_PUBLIC_REVALIDATE }
+    next: { revalidate: 60 || process.env.NEXT_PUBLIC_REVALIDATE }
   })
   if (!res.ok) {
     throw new Error('Failed to fetch data')
