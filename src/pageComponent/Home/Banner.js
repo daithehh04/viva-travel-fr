@@ -63,7 +63,7 @@ function Banner({ data, dataFilter, lang }) {
         height={1000}
         alt='banner'
         priority
-        className='absolute inset-0 object-cover bg-blend-multiply w-full h-full'
+        className='absolute inset-0 object-cover w-full h-full bg-blend-multiply'
       />
       <div className='overlay-banner max-md:hidden'></div>
       <div
@@ -71,7 +71,7 @@ function Banner({ data, dataFilter, lang }) {
         style={{ background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 45.44%, rgba(0, 0, 0, 0.35) 69.74%)' }}
       ></div>
       <div ref={scrollRef}></div>
-      <div className='absolute right-0 bottom-0 max-lg:hidden z-[45]'>
+      <div className='fixed right-0 bottom-0 max-lg:hidden z-[45]'>
         <Button
           className='py-[1.06vw] px-[2.4vw] bg-primaryColor rounded-tl-[1vw] flex items-center text-[1vw] font-[500] gap-x-[0.75vw] cursor-pointer'
           onClick={handleOpenPopup}
