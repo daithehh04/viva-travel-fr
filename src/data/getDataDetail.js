@@ -9,7 +9,7 @@ export default async function getDataDetail(lang, id, query) {
       variables: { language: lang, slug: id }
 
     }),
-    next: process.env.NEXT_PUBLIC_REVALIDATE
+    next: { revalidate: 60 }
   })
   if (!res.ok) {
     throw new Error('Failed to fetch data')

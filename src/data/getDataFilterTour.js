@@ -13,7 +13,7 @@ export default async function getDataFilterTour(data, query) {
       }
 
     }),
-    next: process.env.NEXT_PUBLIC_REVALIDATE
+    next: { revalidate: 60 }
 
   })
   if (!res.ok) {
