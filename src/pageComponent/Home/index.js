@@ -37,6 +37,10 @@ export default function Home({
   const [duration, setDuration] = useState(null)
   const lng = lang?.toUpperCase()
 
+  useEffect(() => {
+    AOS.init({ disable: 'mobile' })
+    AOS.refresh()
+  }, [])
   const dataBestToursHomePage = useQuery(DATA_BEST_TOUR_HOME_PAGE, {
     variables: {
       language: lng,
@@ -68,15 +72,7 @@ export default function Home({
       return numTour >= +minDay && numTour <= +maxDay
     })
   }
-  useEffect(() => {
-    AOS.init({
-      disable: function () {
-        var maxWidth = 769
-        return window.innerWidth < maxWidth
-      }
-    })
-    AOS.refresh()
-  }, [])
+  
   if (!data) {
     return <p>Loading....</p>
   }
