@@ -62,7 +62,7 @@ function InspectionTrip({ data, lang }) {
           }}
           className='relative flex flex-col'
         >
-          {data?.slideTrip?.map((item, index) => {
+          {[...data?.slideTrip,...data?.slideTrip,...data?.slideTrip]?.map((item, index) => {
             return (
               <SwiperSlide key={index}>
                 {({ isActive }) => (
