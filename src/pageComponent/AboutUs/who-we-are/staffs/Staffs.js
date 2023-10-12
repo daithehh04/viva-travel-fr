@@ -6,7 +6,6 @@ import StaffSlide from './StaffSlide'
 import StaffSlideMobile from './StaffSlideMobile'
 
 export default function Staffs({ data }) {
-  console.log(data)
   useEffect(() => {
     AOS.init({ disable: 'mobile' })
     AOS.refresh()
@@ -35,11 +34,11 @@ export default function Staffs({ data }) {
         </p>
       </div>
 
-      <div className='md:hidden flex'>
+      <div className='flex md:hidden'>
         <StaffSlideMobile staffData={data?.staffsInfo} />
       </div>
 
-      <div className='content md:block hidden'>
+      <div className='hidden content md:block'>
         <StaffSlide staffData={data?.staffsInfo} />
       </div>
     </section>

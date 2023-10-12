@@ -1,7 +1,6 @@
 import Blog from '@/pageComponent/Blog'
 import getDataPost from '@/data/getDataPost'
-import { GET_ALL_POST, GET_ALL_TOURS_BESTSELLER } from '@/graphql/post/queries'
-import getDataPage from '@/data/getDataPage'
+import {GET_ALL_TOURS_BESTSELLER } from '@/graphql/post/queries'
 import getMetaDataPages from '@/data/metaData/getMetaDataPages'
 import { GET_META_DATA_BLOG } from '@/graphql/metaData/queries'
 import { getMeta } from '@/data/metaData/getMeta'
@@ -63,7 +62,7 @@ query($language : LanguageCodeFilterEnum!){
 export async function generateMetadata({ params: { lang } }) {
   const res = await getMetaDataPages(GET_META_DATA_BLOG, lang)
   if (!res) return
-  const { ourblog } = res?.data?.page?.translation
+  const ourblog = res?.data?.page?.translation?.ourblog
   const featuredImage = res?.data?.page?.translation?.featuredImage
   const title = ourblog?.meta?.title
   const excerpt = ourblog?.meta?.description
