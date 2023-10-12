@@ -32,7 +32,7 @@ function SlidePartners({ data, reverse }) {
         modules={[Autoplay, FreeMode]}
         className='w-full mySwiper slide-partners'
       >
-        {[...data,...data,...data]?.map((item, index) => {
+        {data?.map((item, index) => {
           return (
               <SwiperSlide className='w-[20%] partner-item' key={index*Math.random()}>
                 <Image 
