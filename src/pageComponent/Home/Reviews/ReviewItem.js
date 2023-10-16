@@ -10,7 +10,7 @@ function ReviewItem({ data, lang }) {
   const tourSlug = data?.customerReview?.tours?.slug
   return (
     <Link
-      href={`${lang}/tours/${tourSlug}`}
+      href={`/tours/${tourSlug}`}
       className='block relative h-[31.9375vw] rounded-[1vw] max-md:rounded-[3.2vw] max-md:h-[104.8vw] max-md:ml-[4vw] customer-review__item cursor-pointer'
     >
       <Image
