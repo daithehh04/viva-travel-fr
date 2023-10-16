@@ -19,6 +19,7 @@ export default function TourDetail({
   const { banner, content, map, priceTour } = data
   const { bannerHeaders, content: contentHeader, relatedTour: relatedTourHeader, subBanner } = headerData
   const reviews = reviewsList?.filter((item) => item?.customerReview?.tours?.slug === slug)
+  if(!data) return <div>Loading...</div>
   return (
     <>
       <TourDetailBanner
@@ -32,7 +33,7 @@ export default function TourDetail({
         price={priceTour}
       />
       <div className='md:my-[7.5vw] relative'>
-        <div className='md:block hidden'>
+        <div className='hidden md:block'>
           <Image
             src={tour}
             alt='tour'
