@@ -556,17 +556,17 @@ export default function AboutTour(props) {
               alt={data?.map?.image?.altText}
               width={1000}
               height={1000}
-              className='md:block hidden w-full md:h-[30vw] h-[130vw] object-cover rounded shadow-[0_2px_50px_0_rgba(0,0,0,0.04)'
+              className='md:block hidden w-full md:h-[30vw] h-[130vw] object-contain rounded shadow-[0_2px_50px_0_rgba(0,0,0,0.04)'
             />
           </div>
         </div>
         {/* review */}
         {reviews?.length > 0 && (
           <div
-            className=' hidden-scroll overflow-auto md:overflow-hidden overflow-y-hidden mb-[13vw]'
+            className=' hidden-scroll overflow-auto md:overflow-hidden overflow-y-hidden md:mt-[4.5vw] mt-[11.5vw]'
             ref={reviewRef}
           >
-            <div className='md:w-[62.1875vw] lg:h-[35.75vw] md:h-[40vw] md:ml-[8.125vw] md:grid flex w-fit h-[121.33vw] grid-cols-2 md:gap-[2vw] gap-[4.44vw]'>
+            <div className='md:w-[62.1875vw] md:ml-[8.125vw] md:grid flex w-fit h-[auto] grid-cols-2 md:gap-[2vw] gap-[4.44vw]'>
               {reviews?.map((item, index) => {
                 return (
                   <div
@@ -576,7 +576,7 @@ export default function AboutTour(props) {
                     }`}
                   >
                     <ReviewItem
-                      className='our-tours-item md:flex hidden'
+                      className='hidden our-tours-item md:flex'
                       data={item}
                       lang={lang}
                     />
@@ -594,7 +594,7 @@ export default function AboutTour(props) {
       </div>
 
       {/* Tour Slide */}
-      <div className='mb-[14.93vw] md:mb-[8.69vw] md:px-[6.38vw]'>
+      <div className='mb-[14.93vw] md:mb-[8.69vw] md:px-[6.38vw] md:mt-[6.31vw] mt-[15vw]'>
         <h4 className='heading-1 md:mb-[3.5vw] mb-[6.4vw] max-md:mx-[4.27vw]'>{relatedTourHeader?.heading}</h4>
         <SlideTour
           data={relatedTours}
@@ -604,8 +604,9 @@ export default function AboutTour(props) {
         <Button
           className='btn-secondary mx-auto mt-[9.83vw] md:mt-[3.5vw]'
           onClick={() => router.push(`/search`)}
+          content={relatedTourHeader?.buttonContent}
         >
-          {relatedTourHeader?.buttonContent}
+          <span>{relatedTourHeader?.buttonContent}</span>
         </Button>
       </div>
 

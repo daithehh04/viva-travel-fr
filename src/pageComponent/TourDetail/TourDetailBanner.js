@@ -219,8 +219,8 @@ export default function TourDetailBanner({ data = {}, headerData, price }) {
           {video?.uploadVideo?.mediaItemUrl && (
             <div className='relative'>
               <Image
-                src={video?.overlayImage.sourceUrl || videoBG}
-                alt={video?.overlayImage.altText || ''}
+                src={video?.overlayImage?.sourceUrl || videoBG}
+                alt={video?.overlayImage?.altText || ''}
                 width={200}
                 height={200}
                 priority
