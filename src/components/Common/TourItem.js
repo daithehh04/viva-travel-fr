@@ -70,14 +70,14 @@ function TourItem({ data, menu, lang, loading, className, onCloseMenu }) {
           />
         )}
 
-        <h3 className='line-clamp-2'>
+        <h3 className='!line-clamp-2'>
           <Link
             href={`/${isPromotion || menu ? 'hot-deals' : 'tours'}/${encodeURIComponent(
               data?.translation?.slug
             )}`}
             className={`text-white ${
               !loading ? 'title-tour' : ''
-            } max-lg:text-[1.6vw] line-clamp-2 text-[1.125vw] max-md:text-[2.93vw] font-bold tracking-tight leading-[1.2] mt-[0.25vw] ${
+            } max-lg:text-[1.6vw] !line-clamp-2 text-[1.125vw] max-md:text-[2.93vw] font-bold tracking-tight leading-[1.2] mt-[0.25vw] ${
               className || ''
             }`}
           >
