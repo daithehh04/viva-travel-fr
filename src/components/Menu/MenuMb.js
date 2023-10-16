@@ -124,7 +124,7 @@ function MenuMb({
             <div className='flex items-center gap-[7.47vw]'>
               {dataMenuCountry?.map((tour, index) => (
                 <Link
-                  href={`/${lang}/our-tours/${tour?.slug}`}
+                  href={`/our-tours/${tour?.slug}`}
                   key={index}
                   className='flex flex-col items-center justify-center flex-shrink-0'
                   onClick={onCloseMenu}
@@ -172,7 +172,7 @@ function MenuMb({
             {travelStylesList?.data?.allTourStyle?.nodes?.map((item, index) => (
               <div key={index}>
                 <Link
-                  href={`/${lang}/travel-style/${item?.slug}`}
+                  href={`/travel-style/${item?.slug}`}
                   className='flex flex-col items-center'
                   onClick={onCloseMenu}
                 >
@@ -250,7 +250,7 @@ function MenuMb({
 
             <div className='flex items-center justify-center mt-[6.4vw] '>
               <Link
-                href={`/${lang}/hot-deals`}
+                href={`/hot-deals`}
                 onClick={onCloseMenu}
                 className='btn-secondary menu-table'
               >
@@ -299,7 +299,7 @@ function MenuMb({
         {/* Item 5 */}
         <div className='flex items-center justify-between'>
           <Link
-            href={`/${lang}/check-visa`}
+            href={`/check-visa`}
             className='text-[4.267vw] opacity-60 capitalize leading-[1.2]'
             onClick={onCloseMenu}
           >
@@ -360,7 +360,7 @@ function MenuMb({
         {/* Item 7 */}
         <div>
           <Link
-            href={`/${lang}/blog`}
+            href={`/blog`}
             className='text-[4.267vw] opacity-60 capitalize leading-[1.2]'
             onClick={onCloseMenu}
           >

@@ -603,7 +603,7 @@ export default function AboutTour(props) {
         />
         <Button
           className='btn-secondary mx-auto mt-[9.83vw] md:mt-[3.5vw]'
-          onClick={() => router.push(`/${lang}/search`)}
+          onClick={() => router.push(`/search`)}
         >
           {relatedTourHeader?.buttonContent}
         </Button>
