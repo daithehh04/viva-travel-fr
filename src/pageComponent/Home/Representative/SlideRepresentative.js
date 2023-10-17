@@ -8,7 +8,7 @@ import icon from '@/assets/images/route-square.svg'
 import callIcon from '@/assets/images/call-calling.svg'
 import directIcon from '@/assets/images/direct.svg'
 
-function SlideRepresent({ data, dataInfo }) {
+function SlideRepresent({ data }) {
   const [indexSlider, setIndexSlider] = useState(0)
   const [slideData, setSlideData] = useState([])
   const swiperRef = useRef()
@@ -90,7 +90,7 @@ function SlideRepresent({ data, dataInfo }) {
                         />
                       </div>
                       <span className='bg-[#444340] text-[#FFD220] md:text-[1vw] md:px-[0.5vw] rounded-[0.67vw] contactInfo md:py-[0.2vw]'>
-                        {dataInfo?.telephone}
+                        {item?.telephone}
                       </span>
                     </div>
                     <div className='flex gap-[0.5vw] flex-row-reverse items-center'>
@@ -104,7 +104,7 @@ function SlideRepresent({ data, dataInfo }) {
                         />
                       </div>
                       <span className='bg-[#444340] text-[#FFD220] md:text-[1vw] md:px-[0.5vw] rounded-[0.67vw] contactInfo md:py-[0.2vw]'>
-                        {dataInfo?.email}
+                        {item?.email}
                       </span>
                     </div>
                   </div>

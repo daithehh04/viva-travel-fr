@@ -9,6 +9,7 @@ import calendarIcon from '@/assets/images/calendarY.svg'
 import restaurantIcon from '@/assets/images/restauY.svg'
 
 function InspectionTrip({ data, lang }) {
+  const dataSlideTrips = data?.slideTrip
   const [indexSlider, setIndexSlider] = useState(0)
   const swiperRef = useRef()
   const handleNextSlide = () => {
@@ -62,7 +63,7 @@ function InspectionTrip({ data, lang }) {
           }}
           className='relative flex flex-col'
         >
-          {[...data?.slideTrip,...data?.slideTrip,...data?.slideTrip]?.map((item, index) => {
+          {dataSlideTrips?.map((item, index) => {
             return (
               <SwiperSlide key={index}>
                 {({ isActive }) => (

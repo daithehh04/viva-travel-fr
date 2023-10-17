@@ -92,18 +92,18 @@ const GET_HOME_PAGE = `query getHomePageData($id:ID!) {
           title
         }
         representative {
-          desc
           title
+          desc
           members {
-            name
-            role
             img {
               altText
               sourceUrl
             }
+            name
+            role
+            email
+            telephone
           }
-          telephone
-          email
         }
         video {
           thumbnail {

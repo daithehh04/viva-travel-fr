@@ -43,7 +43,6 @@ function TouristRepresentative({ data }) {
       >
         <SlideRepresent
           data={data?.members}
-          dataInfo={data}
         />
       </div>
     </div>
