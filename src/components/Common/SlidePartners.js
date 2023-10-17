@@ -5,7 +5,6 @@ import { Autoplay, FreeMode } from 'swiper/modules'
 import Image from 'next/image'
 
 function SlidePartners({ data, reverse }) {
-  console.log('slidePartners',[...data,...data,...data]);
   return (
     <div className='content'>
       <Swiper
@@ -32,7 +31,7 @@ function SlidePartners({ data, reverse }) {
         modules={[Autoplay, FreeMode]}
         className='w-full mySwiper slide-partners'
       >
-        {data?.map((item, index) => {
+        {[...data, ...data, ...data]?.map((item, index) => {
           return (
               <SwiperSlide className='w-[20%] partner-item' key={index*Math.random()}>
                 <Image 
