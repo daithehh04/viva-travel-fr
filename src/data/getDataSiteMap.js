@@ -8,7 +8,7 @@ export default async function getDataSiteMap(query, variables = {}) {
       query,
       variables
     }),
-    next: { revalidate: 120 }
+    next: { revalidate: 60 }
   })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
